@@ -1,39 +1,104 @@
+/* 通用样式 */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: black;
-    color: white;
+    background-color: black; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    margin: 0;
+    padding: 0;
 }
 
+/* Header 样式 */
 header {
     background-color: #1a1a1a; /* 深灰色背景 */
     padding: 20px;
+    text-align: center; /* 中心对齐 */
 }
 
-h1, h2 {
+/* 主标题样式 */
+h1 {
     color: #00aaff; /* 蓝色文字 */
+    font-size: 2.5em; /* 主标题大小 */
+}
+
+/* 副标题样式 */
+p {
+    font-size: 1.2em; /* 副标题大小 */
+    margin: 10px 0; /* 上下间距 */
+}
+
+/* Menu 样式 */
+nav {
+    background-color: #1a1a1a; /* 深灰色背景 */
+    text-align: center; /* 中心对齐 */
+}
+
+nav h2 {
+    color: #00aaff; /* 蓝色文字 */
+    margin: 20px 0; /* 上下间距 */
+}
+
+nav ul {
+    list-style: none; /* 去掉默认列表样式 */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* 横向排列 */
+    margin: 0 15px; /* 左右间距 */
 }
 
 nav ul li a {
     color: #00aaff; /* 蓝色链接 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 1.1em; /* 链接字体大小 */
 }
 
 nav ul li a:hover {
     color: #ffcc00; /* 悬停效果 */
 }
 
+/* Tiles 样式 */
 .tiles {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    flex-wrap: wrap; /* 换行 */
+    margin: 20px 0; /* 上下间距 */
 }
 
 article {
-    margin: 10px;
-    border: 2px solid #00aaff;
-    border-radius: 8px;
-    overflow: hidden;
+    background-color: #2a2a2a; /* 文章背景颜色 */
+    border: 2px solid #00aaff; /* 边框颜色 */
+    border-radius: 8px; /* 圆角 */
+    margin: 10px; /* 外边距 */
+    width: calc(300px - 20px); /* 计算宽度 */
+    transition: transform 0.3s; /* 动画效果 */
+}
+
+article:hover {
+    transform: scale(1.05); /* 悬停时放大效果 */
 }
 
 article .image img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* 自适应宽度 */
+    height: auto; /* 自适应高度 */
+    border-bottom: 2px solid #00aaff; /* 图片下方边框 */
+}
+
+article h2 {
+    color: #00aaff; /* 蓝色标题 */
+    text-align: center; /* 中心对齐 */
+    margin: 10px 0; /* 上下间距 */
+}
+
+article .content {
+    padding: 15px; /* 内边距 */
+    text-align: center; /* 中心对齐 */
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .tiles {
+        flex-direction: column; /* 在小屏幕上纵向排列 */
+        align-items: center; /* 居中对齐 */
+    }
 }
