@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: #1a1a1a; /* 深灰色背景 */
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #00aaff; /* 蓝色文字 */
+}
+
+nav ul li a {
+    color: #00aaff; /* 蓝色链接 */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* 悬停效果 */
+}
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    margin: 10px;
+    border: 2px solid #00aaff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+article .image img {
+    width: 100%;
+    height: auto;
+}
